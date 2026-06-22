@@ -105,7 +105,7 @@ pub fn read_stdin_buffer(sender: &mut SenderObj<WebSocketStream>,
         match sender.send_message(&message) {
             Err(err) => {
                 log!(1, "Error object: {:?}", err);
-                stderr!("An error occured while sending message {:?}: {}",
+                stderr!("An error occurred while sending message {:?}: {}",
                         message, err);
                 exit(1);
             },
@@ -139,7 +139,7 @@ pub fn check_ping_interval(ping_interval: &Option<Duration>,
             match sender.send_message(&frame) {
                 Err(err) => {
                     log!(1, "Error object: {:?}", err);
-                    stderr!("An error occured while sending message {:?}: {}",
+                    stderr!("An error occurred while sending message {:?}: {}",
                             frame, err);
                     exit(1);
                 },
